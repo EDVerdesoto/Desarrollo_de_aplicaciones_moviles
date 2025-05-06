@@ -5,7 +5,9 @@ class Pantalla1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Pantalla 1")),
-      body: Center(child: Text("Contenido de la pantalla 1")),
+      body: Center(
+        child: Text("Contenido de la pantalla 1"),
+      ), //texto que se muestra en el centro
     );
   }
 }

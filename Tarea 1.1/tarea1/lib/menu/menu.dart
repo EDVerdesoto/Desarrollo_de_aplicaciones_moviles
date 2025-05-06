@@ -12,13 +12,13 @@ class MenuPrincipal extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16),
         children: [
-          ElevatedButton(
+          ElevatedButton( // crea un boton 
             onPressed:
-                () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => Pantalla1()),
+                () => Navigator.push(  //navigator.push hace que el boton sea un link
+                  context, 
+                  MaterialPageRoute(builder: (_) => Pantalla1()),  //click para la clase que se debe mostrar
                 ),
-            child: Text("Opción 1"),
+            child: Text("Opción 1"), //texto que se muestra en el boton
           ),
           ElevatedButton(
             onPressed:
