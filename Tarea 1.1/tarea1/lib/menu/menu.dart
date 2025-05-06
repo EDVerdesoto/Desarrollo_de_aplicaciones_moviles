@@ -12,38 +12,49 @@ class MenuPrincipal extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16),
         children: [
-          ElevatedButton( // crea un boton 
+          ElevatedButton(
+            // crea un boton
             onPressed:
-                () => Navigator.push(  //navigator.push hace que el boton sea un link
-                  context, 
-                  MaterialPageRoute(builder: (_) => Pantalla1()),  //click para la clase que se debe mostrar
+                () => Navigator.push(
+                  //navigator.push hace que el boton sea un link
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => Pantalla1(),
+                  ), //click para la clase que se debe mostrar
                 ),
-            child: Text("Opción 1"), //texto que se muestra en el boton
+            child: Text("EJericio 16"), //texto que se muestra en el boton
           ),
+          SizedBox(height: 10),
+
           ElevatedButton(
             onPressed:
                 () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => Pantalla2()),
                 ),
-            child: Text("Opción 2"),
+            child: Text("EJercicio 17"),
           ),
+          SizedBox(height: 10),
+
           ElevatedButton(
             onPressed:
                 () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => Pantalla3()),
+                  MaterialPageRoute(builder: (_) => Amigos()),
                 ),
-            child: Text("Opción 3"),
+            child: Text("Ejercicio 18"),
           ),
+          SizedBox(height: 10),
+
           ElevatedButton(
             onPressed:
                 () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => Pantalla4()),
                 ),
-            child: Text("Opción 4"),
+            child: Text("Ejercicio 22"),
           ),
+          SizedBox(height: 10),
         ],
       ),
     );

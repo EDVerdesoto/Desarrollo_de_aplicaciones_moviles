@@ -4,7 +4,7 @@ class Pantalla2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Pantalla 1")),
+      appBar: AppBar(title: Text("Ejercicio 17")),
       body: Center(child: Text("Contenido de la pantalla 1")),
     );
   }
