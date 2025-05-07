@@ -78,10 +78,10 @@ class CalculadoraSueldo extends State<Pantalla1>{
     if(!data_valida){
       return;
     }else{
-      if(edad !< 18 || edad !> 120){
+      if(edad !< 18 || edad > 120){
         respuesta += 'El empleado debe ser mayor de edad y coherente.\n';
       }
-      if(antiguedad !<= 0 || antiguedad !>= 80){
+      if(antiguedad !<= 0 || antiguedad >= 80){
         respuesta += 'La antiguedad no puede ser menor a 1 año.';
       }
       if(respuesta == ''){
