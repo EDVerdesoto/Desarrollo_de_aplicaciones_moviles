@@ -22,7 +22,7 @@ class MenuPrincipal extends StatelessWidget {
                     builder: (_) => Pantalla1(),
                   ), //click para la clase que se debe mostrar
                 ),
-            child: Text("EJericio 16"), //texto que se muestra en el boton
+            child: Text("Ejericio 16"), //texto que se muestra en el boton
           ),
           SizedBox(height: 10),
 
@@ -32,7 +32,7 @@ class MenuPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (_) => Pantalla2()),
                 ),
-            child: Text("EJercicio 17"),
+            child: Text("Ejercicio 17"),
           ),
           SizedBox(height: 10),
 
