@@ -50,7 +50,7 @@ class MenuPrincipal extends StatelessWidget {
             onPressed:
                 () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => Pantalla4()),
+                  MaterialPageRoute(builder: (_) => PowerSeries()),
                 ),
             child: Text("Ejercicio 22"),
           ),

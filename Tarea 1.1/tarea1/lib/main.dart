@@ -10,3 +10,10 @@ void main() {
     ),
   );
 }
+
+class MyApp extends MaterialApp{
+  const MyApp(
+    {super.key}
+  );
+}
+
