@@ -1,10 +1,10 @@
-package ec.edu.espe.estudiantes_api;
+package ec.edu.espe.pedidos_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EstudiantesApiApplicationTests {
+class PedidosApiApplicationTests {
 
 	@Test
 	void contextLoads() {
