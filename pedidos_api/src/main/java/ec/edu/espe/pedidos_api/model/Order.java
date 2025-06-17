@@ -9,6 +9,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(name = "client_orders")
 public class Order {
 
     @Id
@@ -18,7 +19,7 @@ public class Order {
     private String clientName;
     private Date date;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "orderId", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderDetail> orderDetails;
 
 }
