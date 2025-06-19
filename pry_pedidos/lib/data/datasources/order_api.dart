@@ -9,11 +9,10 @@ class OrderApi {
   Future<List<Order>> fetchOrders() async {
     final response = await http.get(Uri.parse(baseUrl));
 
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       final List<dynamic> jsonList = jsonDecode(response.body);
       return jsonList.map((json) => Order.fromJson(json)).toList();
-    }
-    else{
+    } else {
       throw Exception('Error al cargar pedidos');
     }
   }
@@ -21,10 +20,9 @@ class OrderApi {
   Future<Order> getOrder(int orderId) async {
     final response = await http.get(Uri.parse('$baseUrl/$orderId'));
 
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       return Order.fromJson(jsonDecode(response.body));
-    }
-    else{
+    } else {
       throw Exception('Error al cargar pedido');
     }
   }
@@ -33,30 +31,30 @@ class OrderApi {
     final response = await http.post(
       Uri.parse(baseUrl),
       headers: {'Content-Type': 'application/json'},
-      body: jsonEncode(order.toJson()..remove('id'))
+      body: jsonEncode(order.toJson()..remove('id')),
     );
 
-    if(response.statusCode == 200 || response.statusCode == 201){
+    if (response.statusCode == 200 || response.statusCode == 201) {
       return Order.fromJson(jsonDecode(response.body));
-    }
-    else{
+    } else {
       throw Exception('Error al crear pedido');
     }
   }
 
-  Future<OrderDetail> createOrderDetail(int orderId, OrderDetail orderDetail) async {
+  Future<OrderDetail> createOrderDetail(
+    int orderId,
+    OrderDetail orderDetail,
+  ) async {
     final response = await http.post(
       Uri.parse('$baseUrl/$orderId/details'),
       headers: {'Content-Type': 'application/json'},
-      body: jsonEncode(orderDetail.toJson()..remove('id'))
+      body: jsonEncode(orderDetail.toJson()..remove('id')),
     );
 
-    if(response.statusCode == 200 || response.statusCode == 201){
+    if (response.statusCode == 200 || response.statusCode == 201) {
       return OrderDetail.fromJson(jsonDecode(response.body));
-    }
-    else{
+    } else {
       throw Exception('Error al crear detalle del pedido $orderId');
     }
   }
-
 }

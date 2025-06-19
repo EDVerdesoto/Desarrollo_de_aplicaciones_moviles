@@ -13,23 +13,25 @@ class OrderDetail {
     required this.unitPrice,
   });
 
-  factory OrderDetail.fromJson(Map<String, dynamic> json){
+  // ⇢ al recibir JSON del backend
+  factory OrderDetail.fromJson(Map<String, dynamic> json) {
     return OrderDetail(
-      id: json['id'],
-      orderId: json['orderId'],
-      product: json['product'],
-      amount: json['amount'],
-      unitPrice: json['unitPrice'].toDouble(),
+      id: json['id'] as int,
+      orderId: json['orderId'] as int,
+      product: json['product'] as String,
+      amount: (json['amount'] as num).toInt(),
+      unitPrice: (json['unitPrice'] as num).toDouble(),
     );
   }
 
-  Map<String, dynamic> toJson(){
-    return{
+  // ⇢ al enviar JSON al backend
+  Map<String, dynamic> toJson() {
+    return {
       'id': id,
       'orderId': orderId,
       'product': product,
-      'amount': amount,
-      'unitPrice': unitPrice,
+      'amount': amount, // ya es int
+      'unitPrice': unitPrice, // ya es double
     };
   }
 }
