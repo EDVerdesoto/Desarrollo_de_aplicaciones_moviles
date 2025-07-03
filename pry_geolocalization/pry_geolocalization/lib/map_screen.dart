@@ -53,12 +53,14 @@ class _MapScreenState extends State<MapScreen> {
     print('hola');
     try {
       print('soy el mapa');
-      
-      Position position = await Geolocator.getCurrentPosition(locationSettings: const LocationSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: 10,
-      ));
-      
+
+      Position position = await Geolocator.getCurrentPosition(
+        locationSettings: const LocationSettings(
+          accuracy: LocationAccuracy.high,
+          distanceFilter: 10,
+        ),
+      );
+
       print('Ubicación obtenida: $position');
 
       setState(() {
